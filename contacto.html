@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="Proyecto.css/contacto.css" rel="stylesheet" type="text/css">
+        <link rel="icon" type="image/jpg" href="imagenes/favicon.png.png"/>
+        <script src="/PROYECTO.HTML/contacto.js" type="text/js"></script>
+        <link rel="stylesheet" href="mobile.css" media="screen and (max-width: 640px)">
+        <link rel="stylesheet" href="tablet.css" media="screen and (min-width: 640px) and (max-width: 1280px)">
+        <link rel="stylesheet" href="desktop.css" media="screen and (min-width: 1280px)">
+        <script src="https://kit.fontawesome.com/8daadc7a83.js" crossorigin="anonymous"></script>
+       
+        <title>NATSHOES</title>
+    </head>
+
+    <body >
+        <div class="container">
+    
+    <main >
+        
+            <nav class="barranav" id="flex"> 
+                
+                <strong>
+                <a href="">Registrarse</a>
+                <a href="">Ingresar</a> 
+                <a href="">Buscador</a> <button> <i class="fa-solid fa-magnifying-glass"></i> </p> </button>
+                </strong>
+                
+               
+            
+            </nav>
+    
+    <header >
+        
+        <h1 > NATSHOES</h1> 
+    
+        <div class="icono"> 
+        <img src="imagenes/icono.png.png" alt="logo empresa" width="10px" height="10px"> </div>
+               
+                      
+             <div  class="barranav">
+                 <strong>
+                <a class="nav" href="index.html">HOME</a>
+                <a class="nav" href="Productos.html">PRODUCTOS</a>
+                <a class="nav" href="Contactanos.html">CONTACTANOS</a>  
+            </strong>
+            </div>
+        
+    </header> 
+             
+   
+    <section    class="FlexContainer">
+        <h2>CONTACTANOS</h2>
+
+          <div>
+
+        <form name="f1" method="get" action="destino.html" onsubmit="return validacion();"> 
+
+
+          <div>
+        <label for="nombre">Nombre:</label> 
+        <input type="text" name="nombre" id="nombre" placeholder="Ingrese su Nombre">
+        <label id="mensaje"></label>
+            </div>
+
+
+ <script>
+          function validacion() 
+        {
+            valor = document.getElementById("nombre").value;
+            
+            if( valor == null || valor.length == 0) 
+            {
+                
+                document.getElementById('mensaje').innerHTML = "Tenes que completar el Nombre!";
+                elemento = document.getElementById('nombre');
+                elemento.value ="";
+                elemento.focus();
+                
+                return false;
+            }
+            return true;          
+        }
+    </script>
+    
+
+
+
+    <br>
+
+             <div>
+                <label for="sexo">sexo:</label>
+                <input type="text" name="sexo" id="telefono" maxlength="8" placeholder="Ingrese su Telefono" >
+                <label id="tel"></label>
+                    </div>
+
+                
+
+            <div>
+        <label for="email">Mail</label> <button><i class="fa-light fa-at"></i></button>
+        <input type="email" name="mail" id="email" placeholder="Ingrese su correo electronico">
+        <label id="mensaje"></label>
+                </div>
+
+            <script>
+                    function validacion()
+                    {
+                        valor= document.getElementById("email").value;
+                        if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3,4})+$/.test(valor))
+                        {
+                        document.getElementById("mensaje").innerHTML = "Ingrese una direccion de email correcta";
+                        
+                        elemento = document.getElementById("mensaje");
+                        elemento.value = "";
+                        elemento.focus();
+
+                        return false;
+                    }
+                
+                    else if ( valor == null || valor.length == 0) 
+                    {elemento = document.getElementById("mensaje");
+                        elemento.value = "";
+                        elemento.focus();
+                        return false;
+                }
+                return true
+         
+            }
+                 
+               
+                </script>
+
+
+
+
+                <br>
+              <div>
+                  <label for="comentario">Dejenos su comentario: </label>
+                  <br>
+                <textarea cols="40" rows="10" name="comentario" spellcheck="true"></textarea>
+              </div>
+
+        <div>
+            <label for="terminos"> Acepto los Terminos y Condiciones</label><br>
+            <input type="checkbox" id="terminos" name="terminos" value="condiciones">
+            <label id="mensaje"></label><br><br>
+            
+    </div>
+
+    <script>
+        function validacion() 
+        {
+            
+            elemento = document.getElementById("terminos");
+            
+            if( !elemento.checked ) 
+            {
+                document.getElementById('mensaje').innerHTML = "Debe aceptar los Terminos y Condiciones" ;
+                return false;
+            }
+            
+            return true;          
+        }
+        
+            
+
+    </script>
+    
+    <input type="submit" value="Enviar" /> 
+    <input type="reset" value="Reset" />
+        
+    
+    </form>
+
+            </div>
+    </section>
+
+   </main>
+   
+   <footer >
+    <div>
+        <strong>
+        <a  class="foot" href="index.html">HOME</a>
+        <a class="foot" href="Productos.html">PRODUCTOS</a>
+        
+        <a class="foot" href="Contactanos.html">CONTACTANOS</a>
+    </strong>
+    </div>
+    <div>
+        <br>
+        <p>Copyright 2022
+        </p>
+    </div>
+</footer>
+</main>  
+    <script src="/PROYECTO.HTML/contacto.js"></script>
+</body>
+</html>
+<!--<form name="formulario" method="get" action="procesar.php"> >
